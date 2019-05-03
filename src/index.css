@@ -15,7 +15,10 @@ code {
 
 .container{
   background-color: rgb(180, 180, 77);
-  width: 100%;
+  min-width: 100%;
+  min-height: 700px;
+  display: grid;
+  grid-template-areas: auto auto auto;
 }
 .navDecoration {
   text-align: center;
@@ -44,7 +47,7 @@ code {
 
 
 .searchButton{
-  background-color: rgb(84, 84, 190);
+  background-color: rgb(30, 109, 228);
   color: black;
   border-radius: 5px;
   width: 200px;
@@ -67,5 +70,5 @@ code {
 
 .movieDisplayInfo{
   padding-top: 40px;
-  
+  width: 18rem;
 }
