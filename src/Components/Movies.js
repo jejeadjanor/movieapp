@@ -16,19 +16,10 @@ class Movies extends Component{
 
 componentDidMount(){
     this.moviesOMovies()
-    // this.moviesToBeDisplayed()
     let searchButton = document.getElementById('search')
     searchButton.addEventListener('click', ()=>{this.moviesOMovies()})
 }
 
-// moviesToBeDisplayed(){
-//     let searchInput = document.getElementById('searchMovie')
-//     let title = searchInput.value
-
-//     moviesapifetch.displayMovieDetails(title).then(res => {
-//         res.json().then(data => {this.setState({search:data})})
-//     })
-// }
 
 async moviesOMovies(){
     try {
@@ -55,7 +46,6 @@ render(){
                 <button className='searchButton' type='button' id='search'>Search</button>
             </div>
             <div className='movieDisplayInfo'>
-                {/* <p>{`Year of Movie Production:${this.state.search.Year}`}</p> */}
                 <a target='_blank' href={this.state.search.Website} alt='www.youtube.com'><img src={this.state.search.Poster}/></a>
                 <p>{this.state.search.Plot}</p>
                 <a target='_blank' href={this.state.search.Website}>{this.state.search.Website}</a>
